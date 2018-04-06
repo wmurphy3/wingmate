@@ -1,0 +1,9 @@
+{
+  "presets": ["react-native", "react-native-dotenv", "babel-preset-expo"],
+  "plugins": [ [ "babel-plugin-root-import", [ { "rootPathPrefix": "~" }, { "rootPathPrefix": "*", "rootPathSuffix": "src" } ] ] ],
+  "env": {
+    "development": {
+      "plugins": ["transform-react-jsx-source"]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "sdkVersion": "24.0.0",
+    "icon": "./src/views/assets/mobile_logo.png",
+    "name": "Wingmate",
+    "slug": "wingmate",
+    "version": "1.0.8",
+    "ios": {
+      "bundleIdentifier": "com.wingmate.dev"
+    },
+    "android": {
+      "package": "com.wingmate.dev"
+    }
+  }
+}
