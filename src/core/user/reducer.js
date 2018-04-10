@@ -9,19 +9,8 @@ import {
 const initial = {
   loading: false,
   access_token: null,
-  name: null,
-  phone: null,
-  home_phone: null,
-  account_number: null,
   email: null,
-  username: null,
   id: null,
-  address_line1: null,
-  address_line2: null,
-  city: null,
-  state: null,
-  zip: null,
-  login_username: null
 }
 
 export const userReducer = (state = initial, action) => {
@@ -32,17 +21,7 @@ export const userReducer = (state = initial, action) => {
         loading: false,
         access_token: action.token.access_token,
         email: action.token.email,
-        phone: action.token.phone,
-        home_phone: action.token.home_phone,
-        name: action.token.name,
-        account_number: action.token.meta.accounts[0]["id"],
-        username: action.token.username,
         id: action.token.id,
-        address_line1: action.token.address.address_line1,
-        address_line2: action.token.address.address_line2,
-        city: action.token.address.city,
-        state: action.token.address.state,
-        zip: action.token.address.zip
       }
 
     case USER_INFO_SET:

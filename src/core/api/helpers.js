@@ -1,8 +1,3 @@
-import { REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET } from 'react-native-dotenv'
-
-const CLIENT_ID = REACT_APP_CLIENT_ID
-const CLIENT_SECRET = REACT_APP_CLIENT_SECRET
-
 const logout_sync = () => {
   return {
     type: 'user/LOGOUT'
@@ -30,8 +25,6 @@ export const refreshTokenFormData = (token) => {
 export const getRegisterFormData = () => {
   let formdata = new FormData();
   formdata.append('grant_type','client_credentials');
-  formdata.append('client_id', CLIENT_ID);
-  formdata.append('client_secret', CLIENT_SECRET);
 
   return formdata;
 }

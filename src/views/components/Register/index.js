@@ -37,36 +37,6 @@ export default class Register extends Component {
               component={FieldInput} />
 
             <Field
-              name="name"
-              type="text"
-              placeholder="First and Last Name"
-              component={FieldInput} />
-
-            <Field
-              name="phone"
-              type="text"
-              placeholder="Phone Number"
-              component={FieldInput} />
-
-            <Field
-              name="zip"
-              type="text"
-              placeholder="Property Zip Code"
-              component={FieldInput} />
-
-            <Field
-              name="loan_number"
-              type="text"
-              placeholder="Loan Number"
-              component={FieldInput} />
-
-            <Field
-              name="ssn"
-              type="text"
-              placeholder="Last 4 of SSN"
-              component={FieldInput} />
-
-            <Field
               name="password"
               secureTextEntry={true}
               placeholder="Password"

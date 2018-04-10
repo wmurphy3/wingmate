@@ -73,14 +73,7 @@ function* authorize(credentialsOrToken, turn_touch_id_on) {
       yield call(setAuthToken, response)
       yield put(setUser(response))
 
-      if(turn_touch_id_on) {
-        yield call(setCache, 'email', credentialsOrToken.username)
-        yield call(setCache, 'password', credentialsOrToken.password)
-
-        NavigatorService.navigate('Toc')
-      } else {
-        NavigatorService.navigate('drawerStack')
-      }
+      NavigatorService.navigate('drawerStack')
 
       return response
     } else {
@@ -97,8 +90,7 @@ function* authorize(credentialsOrToken, turn_touch_id_on) {
 function* registeredFlow(action) {
   try {
     const { data } = action
-    const token = yield call(apiUser.getToken)
-    const user = yield call(apiUser.register, data, token['access_token'])
+    const user = yield call(apiUser.register, data)
 
     yield put(setUser(user))
 
